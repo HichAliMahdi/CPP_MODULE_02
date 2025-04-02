@@ -6,11 +6,13 @@
 /*   By: hali-mah <hali-mah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 15:24:19 by hali-mah          #+#    #+#             */
-/*   Updated: 2025/04/02 15:25:37 by hali-mah         ###   ########.fr       */
+/*   Updated: 2025/04/02 15:42:42 by hali-mah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include "Fixed.hpp"
+
 int main( void )
 {
     Fixed a;
