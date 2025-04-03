@@ -6,7 +6,7 @@
 /*   By: hali-mah <hali-mah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 11:20:52 by hali-mah          #+#    #+#             */
-/*   Updated: 2025/04/03 11:29:46 by hali-mah         ###   ########.fr       */
+/*   Updated: 2025/04/03 11:39:57 by hali-mah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,6 +120,37 @@ bool Fixed::operator==(const Fixed& rhs) const
 }
 
 // Inequality operator
+bool Fixed::operator!=(const Fixed& rhs) const
+{
+    return this->_value != rhs._value;
+}
+
+// Bool operations
+bool Fixed::operator>(const Fixed& rhs) const
+{
+    return this->_value > rhs._value;
+}
+
+bool Fixed::operator<(const Fixed& rhs) const
+{
+    return this->_value < rhs._value;
+}
+
+bool Fixed::operator>=(const Fixed& rhs) const
+{
+    return this->_value >= rhs._value;
+}
+
+bool Fixed::operator<=(const Fixed& rhs) const
+{
+    return this->_value <= rhs._value;
+}
+
+bool Fixed::operator==(const Fixed& rhs) const
+{
+    return this->_value == rhs._value;
+}
+
 bool Fixed::operator!=(const Fixed& rhs) const
 {
     return this->_value != rhs._value;
