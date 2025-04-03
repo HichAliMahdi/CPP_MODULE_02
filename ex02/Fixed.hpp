@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hali-mah <hali-mah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/02 15:26:00 by hali-mah          #+#    #+#             */
-/*   Updated: 2025/04/03 10:55:42 by hali-mah         ###   ########.fr       */
+/*   Created: 2025/04/03 11:20:16 by hali-mah          #+#    #+#             */
+/*   Updated: 2025/04/03 11:20:48 by hali-mah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,8 @@
 # define FIXED_HPP
 
 #include <iostream>
+#include <cmath>
 
-class Fixed
-{
-    private:
-        int                 _value;
-        static const int    _fractionalBits = 8;
-        
-    public:
-        Fixed();                                // Default constructor
-        Fixed(const Fixed& src);                // Copy constructor
-        Fixed& operator=(const Fixed& rhs);     // Copy assignment operator
-        ~Fixed();                               // Destructor
 
-        int     getRawBits( void ) const;
-        void    setRawBits(int const raw);
-};
 
 #endif
