@@ -6,7 +6,7 @@
 /*   By: hali-mah <hali-mah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 11:20:52 by hali-mah          #+#    #+#             */
-/*   Updated: 2025/04/03 11:39:57 by hali-mah         ###   ########.fr       */
+/*   Updated: 2025/04/03 11:49:15 by hali-mah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,4 +154,38 @@ bool Fixed::operator==(const Fixed& rhs) const
 bool Fixed::operator!=(const Fixed& rhs) const
 {
     return this->_value != rhs._value;
+}
+
+// Arithmetic operations
+Fixed Fixed::operator+(const Fixed& rhs) const
+{
+    Fixed result;
+    result.setRawBits(this->_value + rhs._value);
+    return result;
+}
+
+Fixed Fixed::operator-(const Fixed& rhs) const
+{
+    Fixed result;
+    result.setRawBits(this->_value - rhs._value);
+    return result;
+}
+
+Fixed Fixed::operator*(const Fixed& rhs) const
+{
+    Fixed result;
+    result.setRawBits((this->_value * rhs._value) >> _fractionalBits);
+    return result;
+}
+
+Fixed Fixed::operator/(const Fixed& rhs) const
+{
+    if (rhs._value == 0)
+    {
+        std::cerr << "Division by 0 not possible in R" << std::endl;
+        return Fixed();
+    }
+    Fixed result;
+    result.setRawBits((this->_value << _fractionalBits) / rhs._value);
+    return result;   
 }
