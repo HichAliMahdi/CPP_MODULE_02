@@ -6,7 +6,7 @@
 /*   By: hali-mah <hali-mah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 11:20:52 by hali-mah          #+#    #+#             */
-/*   Updated: 2025/04/03 11:49:15 by hali-mah         ###   ########.fr       */
+/*   Updated: 2025/04/03 11:55:25 by hali-mah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -188,4 +188,17 @@ Fixed Fixed::operator/(const Fixed& rhs) const
     Fixed result;
     result.setRawBits((this->_value << _fractionalBits) / rhs._value);
     return result;   
+}
+
+// incrementation operations
+Fixed& Fixed::operator++()
+{
+    _value += 1;
+    return (*this);
+}
+
+Fixed& Fixed::operator--()
+{
+    _value -= 1;
+    return (*this);
 }
