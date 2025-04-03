@@ -6,11 +6,9 @@
 /*   By: hali-mah <hali-mah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 11:20:52 by hali-mah          #+#    #+#             */
-/*   Updated: 2025/04/03 12:05:18 by hali-mah         ###   ########.fr       */
+/*   Updated: 2025/04/03 12:11:19 by hali-mah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "Fixed.hpp"
 
 #include "Fixed.hpp"
 
@@ -125,37 +123,6 @@ bool Fixed::operator!=(const Fixed& rhs) const
     return this->_value != rhs._value;
 }
 
-// Bool operations
-bool Fixed::operator>(const Fixed& rhs) const
-{
-    return this->_value > rhs._value;
-}
-
-bool Fixed::operator<(const Fixed& rhs) const
-{
-    return this->_value < rhs._value;
-}
-
-bool Fixed::operator>=(const Fixed& rhs) const
-{
-    return this->_value >= rhs._value;
-}
-
-bool Fixed::operator<=(const Fixed& rhs) const
-{
-    return this->_value <= rhs._value;
-}
-
-bool Fixed::operator==(const Fixed& rhs) const
-{
-    return this->_value == rhs._value;
-}
-
-bool Fixed::operator!=(const Fixed& rhs) const
-{
-    return this->_value != rhs._value;
-}
-
 // Arithmetic operations
 Fixed Fixed::operator+(const Fixed& rhs) const
 {
@@ -194,13 +161,13 @@ Fixed Fixed::operator/(const Fixed& rhs) const
 Fixed& Fixed::operator++()
 {
     _value += 1;
-    return (*this);
+    return *this;
 }
 
 Fixed& Fixed::operator--()
 {
     _value -= 1;
-    return (*this);
+    return *this;
 }
 
 // post-incrementatino operations
@@ -208,14 +175,14 @@ Fixed& Fixed::operator++( int )
 {
     Fixed temp(*this);
     ++(*this);
-    return (temp);
+    return temp;
 }
 
-Fixed& Fixed::operator++( int )
+Fixed& Fixed::operator--( int )
 {
     Fixed temp(*this);
     --(*this);
-    return (temp);
+    return temp;
 }
 
 // min max functions
