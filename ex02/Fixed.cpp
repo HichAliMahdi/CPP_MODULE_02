@@ -6,7 +6,7 @@
 /*   By: hali-mah <hali-mah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 11:20:52 by hali-mah          #+#    #+#             */
-/*   Updated: 2025/04/03 11:55:25 by hali-mah         ###   ########.fr       */
+/*   Updated: 2025/04/03 11:58:29 by hali-mah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -190,7 +190,7 @@ Fixed Fixed::operator/(const Fixed& rhs) const
     return result;   
 }
 
-// incrementation operations
+// Pre-incrementation operations
 Fixed& Fixed::operator++()
 {
     _value += 1;
@@ -201,4 +201,19 @@ Fixed& Fixed::operator--()
 {
     _value -= 1;
     return (*this);
+}
+
+// post-incrementatino operations
+Fixed& Fixed::operator++( int )
+{
+    Fixed temp(*this);
+    ++(*this);
+    return (temp);
+}
+
+Fixed& Fixed::operator++( int )
+{
+    Fixed temp(*this);
+    --(*this);
+    return (temp);
 }
