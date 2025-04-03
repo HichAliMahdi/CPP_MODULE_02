@@ -6,7 +6,7 @@
 /*   By: hali-mah <hali-mah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 11:20:16 by hali-mah          #+#    #+#             */
-/*   Updated: 2025/04/03 12:04:09 by hali-mah         ###   ########.fr       */
+/*   Updated: 2025/04/03 12:12:35 by hali-mah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,8 @@ class Fixed
     Fixed& operator--();
     
     //Post--Incrementation decrementation operators
-    Fixed& operator++( int );
-    Fixed& operator--( int );
+    Fixed operator++( int );
+    Fixed operator--( int );
 
     //Static min max functions
     static Fixed& min(Fixed& a, Fixed& b);
