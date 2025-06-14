@@ -6,12 +6,12 @@
 #    By: hali-mah <hali-mah@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/02 15:41:44 by hali-mah          #+#    #+#              #
-#    Updated: 2025/04/02 15:44:21 by hali-mah         ###   ########.fr        #
+#    Updated: 2025/06/14 20:29:56 by hali-mah         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fixed
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++17
 CC = c++
 
 SRCS = main.cpp Fixed.cpp
