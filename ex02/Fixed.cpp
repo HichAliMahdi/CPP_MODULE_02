@@ -6,7 +6,7 @@
 /*   By: hali-mah <hali-mah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 11:20:52 by hali-mah          #+#    #+#             */
-/*   Updated: 2025/04/03 12:14:00 by hali-mah         ###   ########.fr       */
+/*   Updated: 2025/06/15 22:08:35 by hali-mah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,36 +14,30 @@
 
 // Default constructor
 Fixed::Fixed() : _value(0)
-{
-    std::cout << "Default constructor called" << std::endl;
-}
+{}
 
 
 // Int constructor
 Fixed::Fixed(const int n)
 {
-    std::cout << "Int constructor called" << std::endl;
     _value = n << _fractionalBits;
 }
 
 // Float constructor
 Fixed::Fixed(const float n)
 {
-    std::cout << "Float constructor called" << std::endl;
     _value = roundf(n * (1 << _fractionalBits));
 }
 
 // Copy constructor
 Fixed::Fixed(const Fixed& src)
 {
-    std::cout << "Copy constructor called" << std::endl;
     *this = src;
 }
 
 // Copy assignement operator
 Fixed& Fixed::operator=(const Fixed& rhs)
 {
-    std::cout << "Copy assignement operator called" << std::endl;
     if (this != &rhs)
         this->_value = rhs.getRawBits();
     return *this;
@@ -52,7 +46,6 @@ Fixed& Fixed::operator=(const Fixed& rhs)
 // Destructor
 Fixed::~Fixed()
 {
-    std::cout << "Destructor called" << std::endl;
 }
 
 // Return the raw value
@@ -213,4 +206,3 @@ const Fixed& Fixed::max(const Fixed& a, const Fixed& b)
         return (a);
     return (b);
 }
-
