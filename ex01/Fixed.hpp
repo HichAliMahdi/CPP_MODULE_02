@@ -6,7 +6,7 @@
 /*   By: hali-mah <hali-mah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 10:49:06 by hali-mah          #+#    #+#             */
-/*   Updated: 2025/04/03 11:12:31 by hali-mah         ###   ########.fr       */
+/*   Updated: 2025/06/15 21:56:08 by hali-mah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ class Fixed
         void    setRawBits(int const raw);
         float   toFloat( void ) const;
         int     toInt( void ) const;
-        friend std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
 };
+
+std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
 
 #endif
